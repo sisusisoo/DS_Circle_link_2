@@ -58,7 +58,7 @@ ListNode* delete_first(ListNode* head) {
     if (head == NULL) return head;
     else if (head->link == head) {
         head = NULL;
-        head->link = NULL;
+        //head->link = NULL;
         return head;
     }
     ListNode* ptr = head->link;
@@ -73,7 +73,7 @@ ListNode* delete_last(ListNode* head) {
     else if (head->link == head) {
     
         head = NULL;
-        head->link = NULL;
+       // head->link = NULL;
         free(head);
         return head;
     }
@@ -88,18 +88,6 @@ ListNode* delete_last(ListNode* head) {
     return head;
 }
 
-// 원형 리스트 노드 개수 반환
-int get_Length(ListNode* head) {
-    if (head == NULL) return 0;
-    ListNode* p;
-    p = head;
-    int count = 0;
-    do {
-        p = p->link;
-        count++;
-    } while (p != head);
-    return count;
-}
 
 
 void select(int inputSel) {
